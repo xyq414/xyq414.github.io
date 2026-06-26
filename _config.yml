@@ -1,0 +1,15 @@
+title: 清谈录 · 书影音个人评论
+description: 杂文、书、影、音、项目。个人的视听读日记。
+baseurl: ""
+url: "https://xyq414.github.io"
+author: 清谈录
+
+# 页面统计
+stats:
+  books: 3
+  films: 0
+  music_albums: 0
+
+# Build settings
+markdown: kramdown
+permalink: /:categories/:title/

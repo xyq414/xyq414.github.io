@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post-page">
+  <p class="post-category">{{ page.category }}</p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.subtitle %}
+  <p class="post-subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+  <p class="post-date">{{ page.date | date: "%Y年%-m月%-d日" }}</p>
+  <div class="post-body">
+    {{ content }}
+  </div>
+  <a href="{{ '/' | relative_url }}" class="post-back">← 返回首页</a>
+</article>
