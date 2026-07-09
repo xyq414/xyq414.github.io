@@ -10,6 +10,11 @@ stats:
   films: 0
   music_albums: 0
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # Build settings
 markdown: kramdown
 permalink: /:categories/:title/

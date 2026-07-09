@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="post-page">
+  <p class="post-category">{{ page.status_label }}</p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.subtitle %}
+  <p class="post-subtitle">{{ page.subtitle }}</p>
+  {% endif %}
+  {% if page.tags %}
+  <p class="post-date">
+    {% for tag in page.tags %}
+      {{ tag }}{% unless forloop.last %} · {% endunless %}
+    {% endfor %}
+  </p>
+  {% endif %}
+  <div class="post-body">
+    {{ content }}
+    {% if page.demo_url or page.repo_url %}
+    <h2>链接</h2>
+    <ul>
+      {% if page.demo_url %}
+      <li><a href="{{ page.demo_url | relative_url }}">Demo</a></li>
+      {% endif %}
+      {% if page.repo_url %}
+      <li><a href="{{ page.repo_url }}">GitHub</a></li>
+      {% endif %}
+    </ul>
+    {% endif %}
+  </div>
+  <a href="{{ '/projects/' | relative_url }}" class="post-back">← 返回项目列表</a>
+</article>
