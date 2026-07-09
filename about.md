@@ -11,7 +11,7 @@ permalink: /about/
 <section class="page-content">
   <div class="about-bio">
     <p>
-      海外 QS20 本硕<br>
+      海外QS50本硕<br>
       本科专业：数学、物理、经济、心理<br>
       硕士专业：精算
     </p>
