@@ -8,7 +8,7 @@ title: 首页
     <h1 class="hero-headline">清谈录</h1>
     <p class="hero-subheadline">如果一个人对一本书、一部电影、一首歌曲感到心动<br>那就应该把这件事记下来</p>
     <div class="hero-cta">
-      <a href="{{ '/books/' | relative_url }}" class="cta-link">探索全部评论 →</a>
+      <a href="{{ '/projects/' | relative_url }}" class="cta-link">浏览AI项目 →</a>
     </div>
   </div>
   <div class="hero-right">
@@ -16,7 +16,20 @@ title: 首页
     {% assign latest_book = site.data.books | first %}
     {% assign latest_film = site.data.films | first %}
     {% assign latest_music = site.data.music | first %}
-    {% assign latest_project = site.categories['项目'] | first %}
+    {% assign sorted_projects = site.projects | sort: 'order' %}
+    {% assign featured_project = sorted_projects | first %}
+    <!-- AI项目 -->
+    <div class="hero-card">
+      <div class="hero-card-gold-rule"></div>
+      <span class="hero-card-cat">AI项目</span>
+      {% if featured_project %}
+      <p class="hero-card-review-title">{{ featured_project.title }}</p>
+      <p class="hero-card-review">{{ featured_project.summary | truncate: 120 }}</p>
+      {% else %}
+      <p class="hero-card-excerpt">这里记录我用 AI agent、自动化脚本和个人工作流构建的AI项目。</p>
+      {% endif %}
+      <a href="{{ '/projects/' | relative_url }}" class="hero-card-btn">浏览AI项目</a>
+    </div>
     <!-- 杂文 -->
     <div class="hero-card">
       <div class="hero-card-gold-rule"></div>
@@ -64,13 +77,6 @@ title: 首页
       <p class="hero-card-excerpt">即将添加第一篇乐评…</p>
       {% endif %}
       <a href="{{ '/music/' | relative_url }}" class="hero-card-btn">浏览全部</a>
-    </div>
-    <!-- 项目 -->
-    <div class="hero-card">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">项目</span>
-      <p class="hero-card-excerpt">{% if latest_project %}{{ latest_project.excerpt | strip_html | truncate: 36 }}{% else %}即将添加第一个项目…{% endif %}</p>
-      <a href="{{ '/projects/' | relative_url }}" class="hero-card-btn">浏览项目</a>
     </div>
   </div>
 </section>

@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=20260709' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=20260710' | relative_url }}">
 </head>
 <body>
 
@@ -15,11 +15,11 @@
   <nav class="nav">
     <a href="{{ '/' | relative_url }}" class="nav-logo">清谈录</a>
     <div class="nav-links">
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active"{% endif %}>AI项目</a>
       <a href="{{ '/essays/' | relative_url }}" {% if page.category == '杂文' or page.url == '/essays/' %}class="active"{% endif %}>杂文</a>
       <a href="{{ '/books/' | relative_url }}" {% if page.category == '书' or page.url == '/books/' %}class="active"{% endif %}>书</a>
       <a href="{{ '/films/' | relative_url }}" {% if page.category == '影' or page.url == '/films/' %}class="active"{% endif %}>影</a>
       <a href="{{ '/music/' | relative_url }}" {% if page.category == '音' or page.url == '/music/' %}class="active"{% endif %}>音</a>
-      <a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}>项目</a>
       <a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>关于我</a>
     </div>
   </nav>
@@ -34,16 +34,16 @@
     <div class="footer-main">
       <div class="footer-brand">
         <p class="footer-logo">清谈录</p>
-        <p class="footer-tagline">杂文 · 书 · 影 · 音 · 项目</p>
+        <p class="footer-tagline">AI项目 · 杂文 · 书 · 影 · 音</p>
       </div>
       <div class="footer-nav">
         <div class="footer-nav-col">
           <p class="footer-nav-title">浏览</p>
+          <a href="{{ '/projects/' | relative_url }}">AI项目</a>
           <a href="{{ '/essays/' | relative_url }}">杂文</a>
           <a href="{{ '/books/' | relative_url }}">书籍</a>
           <a href="{{ '/films/' | relative_url }}">影片</a>
           <a href="{{ '/music/' | relative_url }}">音乐</a>
-          <a href="{{ '/projects/' | relative_url }}">项目</a>
         </div>
         <div class="footer-nav-col">
           <p class="footer-nav-title">关于</p>
