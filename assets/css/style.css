@@ -534,15 +534,44 @@ body {
   margin-bottom: 48px;
 }
 
+.project-card {
+  gap: 18px;
+}
+
+.project-card .review-card-category {
+  margin-bottom: -4px;
+}
+
 .project-card-title {
   font-size: 38px;
   line-height: 44px;
 }
 
+.project-card .review-card-subtitle {
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--text-body);
+}
+
+.project-card .review-card-excerpt {
+  font-size: 18px;
+  line-height: 31px;
+  color: #C8BDAF;
+}
+
+.project-card .review-card-meta {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.project-card-actions {
+  padding-top: 2px;
+}
+
 .project-card-actions a {
-  color: var(--accent-gold);
+  color: #E0C36A;
   text-decoration: none;
-  border-bottom: 1px solid rgba(var(--accent-gold-rgb), 0.45);
+  border-bottom: 1px solid rgba(var(--accent-gold-rgb), 0.55);
   transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
 }
 
@@ -1163,6 +1192,9 @@ body {
   .review-card { padding: 28px 24px; }
   .review-card-title { font-size: 24px; line-height: 30px; }
   .project-card-title { font-size: 30px; line-height: 36px; }
+  .project-card .review-card-subtitle { font-size: 16px; line-height: 26px; }
+  .project-card .review-card-excerpt { font-size: 16px; line-height: 27px; }
+  .project-card .review-card-meta { font-size: 13px; line-height: 22px; }
   .projects-header .page-header-title { margin-bottom: 24px; }
   .projects-intro { font-size: 15px; line-height: 26px; }
   .project-section-title { font-size: 28px; margin-top: 10px; }
