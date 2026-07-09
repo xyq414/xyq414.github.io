@@ -40,7 +40,7 @@ personal-news-briefing 不是单纯的爬虫，而是一个面向个人决策的
 
 ## 当前成果 / Current Result
 
-当前版本已经可以生成每日 HTML 简报，并形成固定的输出格式。公开 demo 页面已预留，安全脱敏后的样例会放在这里：[/projects/personal-news-briefing/demo/](/projects/personal-news-briefing/demo/)。
+当前版本已经可以生成每日 HTML 简报，并形成固定的输出格式。公开安全 demo 已可查看：[/projects/personal-news-briefing/demo/](/projects/personal-news-briefing/demo/)。
 
 ## 技术关键词 / Tech Stack
 
@@ -56,4 +56,4 @@ Python、HTML report、LLM summarization、automation workflow、information pip
 
 ## Demo
 
-公开样例准备中：[/projects/personal-news-briefing/demo/](/projects/personal-news-briefing/demo/)。
+公开安全 demo 已可查看：[/projects/personal-news-briefing/demo/](/projects/personal-news-briefing/demo/)。该页面使用模拟/脱敏内容展示简报结构，不公开真实日报、私有来源或本地配置。
