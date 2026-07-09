@@ -501,6 +501,56 @@ body {
   color: var(--text-dark);
 }
 
+/* ── Projects Portfolio ── */
+.projects-header {
+  padding-bottom: 20px;
+}
+
+.projects-header .page-header-title {
+  margin-bottom: 36px;
+}
+
+.projects-intro {
+  max-width: 1280px;
+  font-size: 16px;
+  line-height: 30px;
+  color: var(--text-body);
+  font-style: italic;
+}
+
+.projects-content {
+  padding-top: 0;
+}
+
+.project-section-title {
+  margin: 18px 0 8px;
+  font-family: var(--font-heading);
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--text-headline);
+}
+
+.projects-list {
+  margin-bottom: 48px;
+}
+
+.project-card-title {
+  font-size: 38px;
+  line-height: 44px;
+}
+
+.project-card-actions a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(var(--accent-gold-rgb), 0.45);
+  transition: color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.project-card-actions a:hover {
+  color: var(--text-headline);
+  border-color: var(--text-headline);
+  opacity: 0.85;
+}
 /* ── Book List (Douban-style) ── */
 .book-list-header {
   display: flex;
@@ -1112,6 +1162,10 @@ body {
   .category-grid { grid-template-columns: 1fr; }
   .review-card { padding: 28px 24px; }
   .review-card-title { font-size: 24px; line-height: 30px; }
+  .project-card-title { font-size: 30px; line-height: 36px; }
+  .projects-header .page-header-title { margin-bottom: 24px; }
+  .projects-intro { font-size: 15px; line-height: 26px; }
+  .project-section-title { font-size: 28px; margin-top: 10px; }
 
   .post-page { padding: 48px 20px; }
   .post-title { font-size: 32px; }
