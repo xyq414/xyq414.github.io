@@ -4,27 +4,25 @@ title: 首页
 ---
 <!-- Hero -->
 <section class="hero">
-  <div class="hero-left">
-    <h1 class="hero-headline">清谈录</h1>
-    <p class="hero-subheadline">如果一个人对一本书、一部电影、一首歌曲感到心动<br>那就应该把这件事记下来</p>
-    <div class="hero-cta">
-      <a href="{{ '/projects/' | relative_url }}" class="cta-link">浏览AI项目 →</a>
-    </div>
-  </div>
   <div class="hero-right">
     {% assign latest_essay = site.categories['杂文'] | first %}
     {% assign latest_book = site.data.books | first %}
     {% assign latest_film = site.data.films | first %}
     {% assign latest_music = site.data.music | first %}
     {% assign sorted_projects = site.projects | sort: 'order' %}
-    {% assign featured_project = sorted_projects | first %}
     <!-- AI项目 -->
-    <div class="hero-card">
+    <div class="hero-card hero-card-projects">
       <div class="hero-card-gold-rule"></div>
       <span class="hero-card-cat">AI项目</span>
-      {% if featured_project %}
-      <p class="hero-card-review-title">{{ featured_project.title }}</p>
-      <p class="hero-card-review">{{ featured_project.summary | truncate: 120 }}</p>
+      {% if sorted_projects.size > 0 %}
+      <div class="hero-project-list">
+        {% for project in sorted_projects limit: 4 %}
+        <a href="{{ project.url | relative_url }}" class="hero-project-item">
+          <span class="hero-project-name">{{ project.title }}</span>
+          <span class="hero-project-summary">{{ project.summary | truncate: 88 }}</span>
+        </a>
+        {% endfor %}
+      </div>
       {% else %}
       <p class="hero-card-excerpt">这里记录我用 AI agent、自动化脚本和个人工作流构建的AI项目。</p>
       {% endif %}
