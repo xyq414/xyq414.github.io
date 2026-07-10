@@ -2,79 +2,89 @@
 layout: default
 title: 首页
 ---
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-right">
-    {% assign latest_essay = site.categories['杂文'] | first %}
-    {% assign latest_book = site.data.books | first %}
-    {% assign latest_film = site.data.films | first %}
-    {% assign latest_music = site.data.music | first %}
-    {% assign sorted_projects = site.projects | sort: 'order' %}
-    <!-- AI项目 -->
-    <div class="hero-card hero-card-projects">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">AI项目</span>
+{% assign latest_essay = site.categories['杂文'] | first %}
+{% assign latest_book = site.data.books | first %}
+{% assign latest_film = site.data.films | first %}
+{% assign latest_music = site.data.music | first %}
+{% assign sorted_projects = site.projects | sort: 'order' %}
+
+<main class="home">
+  <div class="home-layout">
+    <section class="home-projects" aria-labelledby="home-projects-title">
+      <header class="home-section-header">
+        <div class="home-section-heading">
+          <span class="home-section-rule" aria-hidden="true"></span>
+          <h1 id="home-projects-title">AI项目</h1>
+        </div>
+        <a href="{{ '/projects/' | relative_url }}" class="home-section-link">浏览AI项目</a>
+      </header>
+
       {% if sorted_projects.size > 0 %}
-      <div class="hero-project-list">
+      <div class="home-project-grid">
         {% for project in sorted_projects limit: 4 %}
-        <a href="{{ project.url | relative_url }}" class="hero-project-item">
-          <span class="hero-project-name">{{ project.title }}</span>
-          <span class="hero-project-summary">{{ project.summary | truncate: 88 }}</span>
+        <a href="{{ project.url | relative_url }}" class="home-project-item">
+          <span class="home-project-name">{{ project.title }}</span>
+          <span class="home-project-summary">{{ project.summary | truncate: 88 }}</span>
         </a>
         {% endfor %}
       </div>
       {% else %}
-      <p class="hero-card-excerpt">这里记录我用 AI agent、自动化脚本和个人工作流构建的AI项目。</p>
+      <p class="home-project-empty">这里记录我用 AI agent、自动化脚本和个人工作流构建的AI项目。</p>
       {% endif %}
-      <a href="{{ '/projects/' | relative_url }}" class="hero-card-btn">浏览AI项目</a>
-    </div>
-    <!-- 杂文 -->
-    <div class="hero-card">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">杂文</span>
-      {% if latest_essay %}
-      <p class="hero-card-review-title">《{{ latest_essay.title }}》</p>
-      <p class="hero-card-review">{{ latest_essay.excerpt | strip_html | truncate: 120 }}</p>
-      {% else %}
-      <p class="hero-card-excerpt">随笔散记，即将落笔…</p>
-      {% endif %}
-      <a href="{{ '/essays/' | relative_url }}" class="hero-card-btn">浏览杂文</a>
-    </div>
-    <!-- 书 -->
-    <div class="hero-card">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">书</span>
-      {% if latest_book %}
-      <p class="hero-card-review-title">《{{ latest_book.title }}》</p>
-      <p class="hero-card-review">{{ latest_book.comment | truncate: 120 }}</p>
-      {% else %}
-      <p class="hero-card-excerpt">即将添加第一篇书评…</p>
-      {% endif %}
-      <a href="{{ '/books/' | relative_url }}" class="hero-card-btn">浏览全部</a>
-    </div>
-    <!-- 影 -->
-    <div class="hero-card">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">影</span>
-      {% if latest_film %}
-      <p class="hero-card-review-title">《{{ latest_film.title }}》</p>
-      <p class="hero-card-review">{{ latest_film.comment | truncate: 120 }}</p>
-      {% else %}
-      <p class="hero-card-excerpt">即将添加第一篇影评…</p>
-      {% endif %}
-      <a href="{{ '/films/' | relative_url }}" class="hero-card-btn">浏览全部</a>
-    </div>
-    <!-- 音 -->
-    <div class="hero-card">
-      <div class="hero-card-gold-rule"></div>
-      <span class="hero-card-cat">音</span>
-      {% if latest_music %}
-      <p class="hero-card-review-title">《{{ latest_music.title }}》</p>
-      <p class="hero-card-review">{{ latest_music.comment | truncate: 120 }}</p>
-      {% else %}
-      <p class="hero-card-excerpt">即将添加第一篇乐评…</p>
-      {% endif %}
-      <a href="{{ '/music/' | relative_url }}" class="hero-card-btn">浏览全部</a>
+    </section>
+
+    <div class="home-journal">
+      <section class="home-journal-item">
+        <div class="home-journal-copy">
+          <h2 class="home-journal-cat">杂文</h2>
+          {% if latest_essay %}
+          <p class="home-journal-title">《{{ latest_essay.title }}》</p>
+          <p class="home-journal-excerpt">{{ latest_essay.excerpt | strip_html | truncate: 120 }}</p>
+          {% else %}
+          <p class="home-journal-excerpt">随笔散记，即将落笔…</p>
+          {% endif %}
+        </div>
+        <a href="{{ '/essays/' | relative_url }}" class="home-journal-link">浏览杂文</a>
+      </section>
+
+      <section class="home-journal-item">
+        <div class="home-journal-copy">
+          <h2 class="home-journal-cat">书</h2>
+          {% if latest_book %}
+          <p class="home-journal-title">《{{ latest_book.title }}》</p>
+          <p class="home-journal-excerpt">{{ latest_book.comment | truncate: 120 }}</p>
+          {% else %}
+          <p class="home-journal-excerpt">即将添加第一篇书评…</p>
+          {% endif %}
+        </div>
+        <a href="{{ '/books/' | relative_url }}" class="home-journal-link">浏览全部</a>
+      </section>
+
+      <section class="home-journal-item">
+        <div class="home-journal-copy">
+          <h2 class="home-journal-cat">影</h2>
+          {% if latest_film %}
+          <p class="home-journal-title">《{{ latest_film.title }}》</p>
+          <p class="home-journal-excerpt">{{ latest_film.comment | truncate: 120 }}</p>
+          {% else %}
+          <p class="home-journal-excerpt">即将添加第一篇影评…</p>
+          {% endif %}
+        </div>
+        <a href="{{ '/films/' | relative_url }}" class="home-journal-link">浏览全部</a>
+      </section>
+
+      <section class="home-journal-item">
+        <div class="home-journal-copy">
+          <h2 class="home-journal-cat">音</h2>
+          {% if latest_music %}
+          <p class="home-journal-title">《{{ latest_music.title }}》</p>
+          <p class="home-journal-excerpt">{{ latest_music.comment | truncate: 120 }}</p>
+          {% else %}
+          <p class="home-journal-excerpt">即将添加第一篇乐评…</p>
+          {% endif %}
+        </div>
+        <a href="{{ '/music/' | relative_url }}" class="home-journal-link">浏览全部</a>
+      </section>
     </div>
   </div>
-</section>
+</main>
