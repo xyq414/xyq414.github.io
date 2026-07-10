@@ -13,7 +13,6 @@ title: 首页
     <section class="home-projects" aria-labelledby="home-projects-title">
       <header class="home-section-header">
         <div class="home-section-heading">
-          <span class="home-section-rule" aria-hidden="true"></span>
           <h1 id="home-projects-title">AI项目</h1>
         </div>
         <a href="{{ '/projects/' | relative_url }}" class="home-section-link">浏览AI项目</a>
@@ -23,7 +22,12 @@ title: 首页
       <div class="home-project-grid">
         {% for project in sorted_projects limit: 4 %}
         <a href="{{ project.url | relative_url }}" class="home-project-item">
+          <span class="home-project-meta">
+            <span class="home-project-status home-project-status-{{ project.status }}">{{ project.status_label }}</span>
+            <span class="home-project-updated">{{ project.updated }}</span>
+          </span>
           <span class="home-project-name">{{ project.title }}</span>
+          <span class="home-project-subtitle">{{ project.subtitle }}</span>
           <span class="home-project-summary">{{ project.summary | truncate: 88 }}</span>
         </a>
         {% endfor %}
