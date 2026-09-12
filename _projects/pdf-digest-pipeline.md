@@ -2,6 +2,7 @@
 layout: project
 title: pdf-digest-pipeline
 subtitle: 扫描 PDF OCR、章节切分与长文摘要流水线
+description: 把扫描 PDF 解析、切分并整理成可阅读的章节摘要。
 status: active
 status_label: 持续迭代
 category: personal
@@ -46,3 +47,4 @@ pdf-digest-pipeline 是一个面向扫描 PDF 和长文资料的处理流水线�
 ## 当前状态
 
 项目处于持续迭代阶段，重点是提升长文处理的稳定性、章节边界判断和失败后可恢复能力。
+

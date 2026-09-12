@@ -5,7 +5,8 @@ title: 首页
 {% assign featured_projects = site.projects | sort: 'order' %}
 <main class="home simple-home">
 <header class="simple-intro"><p class="home-mark">清谈录</p><h1>AI applications, agents<br>and automation.</h1><p>我做面向真实工作的 AI 系统，也写书、电影、音乐和日常观察。</p></header>
-<section class="simple-projects"><div class="simple-section-head"><h2>Projects</h2><a href="{{ '/projects/' | relative_url }}">全部项目 →</a></div><ol class="project-list">{% for project in featured_projects %}{% if project.portfolio_group != 'labs' and project.order <= 20 %}<li><a href="{{ project.url | relative_url }}"><span>{{ project.title }}</span><small>{{ project.updated | default: 'Selected work' }}</small><b>↗</b></a></li>{% endif %}{% endfor %}</ol></section>
+<section class="simple-projects"><div class="simple-section-head"><h2>Projects</h2><a href="{{ '/projects/' | relative_url }}">全部项目 →</a></div><ol class="project-list">{% for project in featured_projects %}{% if project.portfolio_group != 'labs' and project.order <= 20 %}<li><a href="{{ project.url | relative_url }}"><span>{{ project.title }}<em>{{ project.description }}</em></span><small>{{ project.updated | default: 'Selected work' }}</small><b>↗</b></a></li>{% endif %}{% endfor %}</ol></section>
 <section class="simple-writing"><div class="simple-section-head"><h2>Writing</h2></div><div class="writing-links"><a href="{{ '/essays/' | relative_url }}">杂文 <span>Essays</span> →</a><a href="{{ '/books/' | relative_url }}">书 <span>Books</span> →</a><a href="{{ '/films/' | relative_url }}">影 <span>Films</span> →</a><a href="{{ '/music/' | relative_url }}">音 <span>Music</span> →</a></div></section>
 </main>
+
 

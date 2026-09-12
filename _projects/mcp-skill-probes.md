@@ -2,6 +2,7 @@
 layout: project
 title: mcp-skill-probes
 subtitle: MCP、Skill 与外部工具可用性探针
+description: 记录 MCP、Skill 与外部工具的试用和验证。
 status: experimental
 status_label: 实验验证
 category: labs
@@ -45,3 +46,4 @@ mcp-skill-probes 是一组面向 MCP、Skill 和外部工具的真实可用性�
 ## 当前状态
 
 实验验证中。这个项目会持续记录工具能力变化和实际使用结论。
+

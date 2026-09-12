@@ -2,6 +2,7 @@
 layout: project
 title: personal-ai-tools
 subtitle: 个人 AI 工具集合与自动化工作台
+description: 收集日常写作、转写和摘要中反复使用的小工具。
 status: active
 status_label: 持续迭代
 category: labs
@@ -45,3 +46,4 @@ personal-ai-tools 是个人 AI 工具集合，用来沉淀高频使用的解释�
 ## 当前状态
 
 项目持续迭代中。它更像一个长期工具箱：成熟工具会稳定下来，实验工具会继续调整或归档。
+

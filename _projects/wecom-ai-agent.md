@@ -2,6 +2,7 @@
 layout: project
 title: WeCom AI Agent
 subtitle: 在真实业务入口里组合合同、融资资料、测算与问答 Skills
+description: 通过企业微信处理合同、资料整理、测算和业务问答等任务。
 status: featured
 status_label: 核心 Case Study
 category: enterprise
@@ -126,4 +127,5 @@ summary: 企业微信作为真实业务入口，Agent 通过可组合 Skills 理
 ## Current boundaries
 
 当前合同能力只在受控 test profile 验证；正式业务 profile 的能力开放与它隔离。系统不自动签署合同、不替代法律审核、不把历史合同当作当前事实，也不公开任何企业内部身份或凭据。下一步优先是更多真实但可脱敏的 Golden Case，以及对失败交付和用户确认路径的持续回归。
+
 

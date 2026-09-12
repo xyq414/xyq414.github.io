@@ -2,6 +2,7 @@
 layout: project
 title: personal-news-briefing
 subtitle: 个人新闻、财经与科技信息摘要系统
+description: 从公开新闻和市场信息中整理每日可读的摘要。
 status: mature
 status_label: 成熟可用，持续迭代
 category: personal
@@ -66,3 +67,4 @@ Python、HTML report、LLM summarization、automation workflow、information pip
 ## Demo
 
 Demo 页面展示一份公开版 HTML 简报样例：[/projects/personal-news-briefing/demo/](/projects/personal-news-briefing/demo/)。公开页面不包含真实私有配置、API key、Cookie 或本地刷新脚本。
+
