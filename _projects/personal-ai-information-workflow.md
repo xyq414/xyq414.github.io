@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Personal AI Information Workflow
+title: Personal AI Information System
 subtitle: 把公众号、新闻和长文资料变成可检索、可复用的个人信息系统
 status: active
 status_label: 持续迭代
@@ -126,3 +126,4 @@ source URL / PDF
 ## Current boundaries
 
 这是个人信息系统，不是通用搜索引擎，也不保证所有站点都可抓取。摘要质量受来源页面、OCR 结果和模型响应影响；系统会保留限制并允许人工复核。所有真实配置、私人数据和服务凭据都留在受限运行环境。
+

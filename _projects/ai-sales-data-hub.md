@@ -1,6 +1,6 @@
 ---
 layout: project
-title: AI 销售数据中台
+title: AI Sales Data Hub
 subtitle: 从微信、电话、附件与 Excel，到可追溯的智能销售台账
 status: featured
 status_label: 核心 Case Study
@@ -124,3 +124,4 @@ summary: 面向新能源 / 光伏销售团队的跨渠道事实层：保留原�
 ## Current boundaries
 
 这是一个 local-first 的销售事实层，不自动发送客户消息、不替销售做最终归属判断，也不把 synthetic benchmark 当成真实业务表现。后续扩展会优先增加可审计的来源类型和确认流程，而不是先堆更多模型调用。
+

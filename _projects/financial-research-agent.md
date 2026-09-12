@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Financial / Research Agent
+title: Financial Research Agent
 subtitle: 量化策略开发与项目尽调中的证据分层工作流
 status: active
 status_label: 研究工作流
@@ -123,3 +123,4 @@ summary: 面向金融研究的 Agent workflow：从数据与材料进入，到�
 ## Current boundaries
 
 量化研究系统不自动交易、不提供个股买卖建议；部分数据源的严格 point-in-time 属性仍有明确限制。尽调 Research Agent 的公开内容是方法与工作流示例，不代表对任何项目或公司的投资判断。只有经过来源核验、参数冻结和人工复核的结果，才进入正式报告层。
+

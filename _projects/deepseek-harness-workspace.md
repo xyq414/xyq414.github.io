@@ -1,6 +1,6 @@
 ---
 layout: project
-title: DeepSeek Harness · 企业 AI Workspace
+title: DeepSeek Harness Workspace
 subtitle: 用 Context、Skills、Memory 与 Files 让 Agent 在工作区里持续协作
 status: featured
 status_label: 核心 Case Study
@@ -124,3 +124,4 @@ Context v0.2 维护四个互补集合：
 ## Current boundaries
 
 当前实现是单主 Agent + 模块化能力，不引入第二业务数据库、RAG / 向量库或知识图谱。它适合在资料边界清楚的工作区里做可追溯复核；主体查询没有合法 provider 时会诚实失败，合同 Demo 也会保留空白。下一步优先是更好的证据选择与用户确认，而不是无边界扩大上下文。
+
