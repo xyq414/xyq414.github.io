@@ -5,6 +5,8 @@ subtitle: MCP、Skill 与外部工具可用性探针
 status: experimental
 status_label: 实验验证
 category: labs
+portfolio_group: labs
+group_label: Labs & Experiments
 featured: false
 order: 4
 tags:
@@ -16,7 +18,14 @@ tags:
 demo_url:
 repo_url:
 visibility: mixed
-updated: 2026-07-09
+updated: 2026-09-12
+case_study: false
+role_fit: Agent evaluation · Tooling
+problem: 工具“看起来可用”不等于能进入长期工作流，需要先验证输入输出边界与失败原因。
+inputs: MCP / Skill 候选、最小调用样例与失败记录。
+engineering: 用小型探针记录可调用性、权限、格式和网络边界，再决定是否纳入工作流。
+evidence_label: 探针脚本 + 结果记录
+evidence_note: 实验记录只保留可公开的能力结论，不包含登录态、凭据或私有运行数据。
 summary: 用小型探针验证 MCP、Skill 和外部工具的真实可用性，记录结果并沉淀 agent 工作流。
 ---
 # mcp-skill-probes

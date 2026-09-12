@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="清谈录：AI Agent / AI 应用工程作品集，以及书、影、音与杂文。">
+  <meta name="theme-color" content="#101417">
   <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=20260710-home-status' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=20260913-agent-portfolio' | relative_url }}">
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <!-- Navigation -->
   <nav class="nav">
     <a href="{{ '/' | relative_url }}" class="nav-logo">清谈录</a>
     <div class="nav-links">
-      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active"{% endif %}>AI项目</a>
+      <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active ai-nav-link"{% endif %}>AI项目</a>
       <a href="{{ '/essays/' | relative_url }}" {% if page.category == '杂文' or page.url == '/essays/' %}class="active"{% endif %}>杂文</a>
       <a href="{{ '/books/' | relative_url }}" {% if page.category == '书' or page.url == '/books/' %}class="active"{% endif %}>书</a>
       <a href="{{ '/films/' | relative_url }}" {% if page.category == '影' or page.url == '/films/' %}class="active"{% endif %}>影</a>
@@ -25,7 +28,7 @@
   </nav>
   <div class="nav-rule"></div>
 
-  {{ content }}
+  <div id="main-content">{{ content }}</div>
 
   <!-- Footer -->
   {% unless page.url == '/' %}
@@ -34,7 +37,7 @@
     <div class="footer-main">
       <div class="footer-brand">
         <p class="footer-logo">清谈录</p>
-        <p class="footer-tagline">AI项目 · 杂文 · 书 · 影 · 音</p>
+        <p class="footer-tagline">AI Agent · AI应用工程 · 杂文 · 书 · 影 · 音</p>
       </div>
       <div class="footer-nav">
         <div class="footer-nav-col">

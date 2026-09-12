@@ -4,9 +4,18 @@ title: personal-news-briefing
 subtitle: 个人新闻、财经与科技信息摘要系统
 status: mature
 status_label: 成熟可用，持续迭代
-category: featured
-featured: true
-order: 1
+category: personal
+portfolio_group: personal
+group_label: Personal AI Systems
+featured: false
+order: 32
+case_study: false
+role_fit: AI 应用工程 · FDE
+problem: 多源新闻、财经与科技信息分散，低质量刷新会覆盖更好的结果。
+inputs: 真实搜索结果、原文 URL、页面正文片段与市场指标。
+engineering: 搜索与摘要分离；代码保留真实 URL，LLM 只做筛选和分层摘要。
+evidence_label: 本地运行链路 + 公开 Demo
+evidence_note: Demo 展示公开版 HTML 输出；真实配置、密钥与本地刷新数据不进入站点。
 tags:
   - LLM
   - Python
@@ -16,7 +25,7 @@ tags:
 demo_url: /projects/personal-news-briefing/demo/
 repo_url:
 visibility: private
-updated: 2026-07-09
+updated: 2026-09-12
 summary: 面向个人决策的信息流处理系统，将新闻、财经与科技信息整理成每日 HTML 简报。
 ---
 # personal-news-briefing

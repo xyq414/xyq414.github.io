@@ -36,7 +36,7 @@ permalink: /films/
         <p class="book-comment"><span class="book-rating">（{{ film.rating }}/10）</span></p>
         {% endif %}
       </div>
-      {% if film.imdb %}
+      {% if film.imdb and film.imdb != '' %}
       <span class="film-imdb"><a href="https://www.imdb.com/title/{{ film.imdb }}/" target="_blank" rel="noopener">{{ film.imdb }}</a></span>
       {% endif %}
     </div>
